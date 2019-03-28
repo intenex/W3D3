@@ -9,7 +9,7 @@
 #
 
 class User < ApplicationRecord
-    validates(:email, presence: true, uniqueness: true)
+    validates(:email, presence: true, uniqueness: true, email: true)
 
     has_many(
         :submitted_urls,
